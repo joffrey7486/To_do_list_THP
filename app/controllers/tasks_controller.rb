@@ -29,10 +29,19 @@ before_action :authenticate_user!
   end
 
   def update
-    @task = Task.find(params[:id])
-    @task.update(task_params)
-    redirect_to tasks_path
-    flash[:notice] = "Task edited"
+    if params[:status]
+      @task = Task.find(params[:id])
+      @task.status == true ? @task.update(status: false) : @task.update(status: true)
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js { }
+      end
+    else
+      @task = Task.find(params[:id])
+      @task.update(task_params)
+      # redirect_to tasks_path
+      flash[:notice] = "Task edited"
+    end
   end
 
   def index
