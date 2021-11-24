@@ -1,0 +1,1 @@
+document.getElementById("<%= @task.category.title.split(" ").join %>").insertAdjacentHTML("beforeend", "<%= j render '/home/task', task: @task %>")
