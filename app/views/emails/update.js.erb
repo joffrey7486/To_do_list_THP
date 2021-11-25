@@ -1,0 +1,11 @@
+emailLine = document.getElementById("email-<%= @email.id %>")
+emailObject = emailLine.querySelector("td")
+readButton = emailLine.querySelector(".btn.btn-info")
+
+<% if @email.read %>
+    emailObject.classList.remove("fw-bolder")
+    readButton.innerHTML = "Marquer comme non lu"
+<% else %>    
+    emailObject.classList.add("fw-bolder")
+    readButton.innerHTML = "Marquer comme lu"
+<% end %>

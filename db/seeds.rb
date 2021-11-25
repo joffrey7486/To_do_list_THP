@@ -17,3 +17,10 @@ require 'faker'
     my_task.save
   end
 end
+
+50.times do
+  Email.create(
+    object: Faker::TvShows::FamilyGuy.quote,
+    body: Faker::TvShows::GameOfThrones.quote
+  )
+end
