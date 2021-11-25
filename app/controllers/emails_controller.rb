@@ -5,10 +5,9 @@ class EmailsController < ApplicationController
 
   def create
     @email = Email.create(
-      object: Faker::TvShows::FamilyGuy.quote,
-      body: Faker::TvShows::GameOfThrones.quote
+      object: Faker::Book.title ,
+      body: Faker::Quote.matz 
     )
-
     respond_to do |format|
       format.html { redirect_to emails_path }
       format.js { }

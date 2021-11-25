@@ -1,4 +1,5 @@
 <h3><%= email.object %></h3>
+<p class="text-muted">Reçu le <%= email.created_at.strftime("%d/%m/%Y à %-H:%M") %></p>
 <p><%= email.body %></p>
 <%= link_to email.read ? "Marquer comme non lu" : "Marquer comme lu", email_path(email.id),method: :put, remote: true, class:"btn btn-info" %>
 <%= link_to "Supprimer l'email", email_path(@email), remote: true, method: :delete, class:"btn btn-outline-danger" %>

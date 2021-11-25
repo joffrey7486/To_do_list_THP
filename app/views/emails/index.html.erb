@@ -1,4 +1,5 @@
-<h1>Emails</h1>
+
+<h1>Emails <i class="fab fa-angellist"></i></h1>
 <%= link_to "Recevoir un email", emails_path, remote: true, method: :post, class:"btn btn-outline-primary" %>
 <div class="col-lg-12 mb-30">
     <div class="portlet-box">
@@ -7,7 +8,7 @@
             </div>
         </div>
         <div class="portlet-body pt-1 pb-1">
-            <table class="table table-bordered mb-0">
+            <table class="table table-bordered table-hover mb-0">
             <thead>
             <tr>
                 <th class="col-2">Liste des emails</th>
@@ -23,8 +24,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-appui sur le bouton -> controleur Update -> met à jour la bdd -> redirige vers le fichier ...js.erb -> change l'apparence de l'email
