@@ -5,7 +5,7 @@ class EmailsController < ApplicationController
 
   def create
     @email = Email.create(
-      object: Faker::Book.title ,
+      object: Faker::Book.title,
       body: Faker::Quote.matz 
     )
     respond_to do |format|
@@ -40,6 +40,4 @@ class EmailsController < ApplicationController
       format.js { }
     end
   end
-
-
 end
