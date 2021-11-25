@@ -1,1 +1,3 @@
-document.querySelector("tbody").insertAdjacentHTML("afterbegin", "<%= j render 'email', email: @email %>")
+document
+  .querySelector("tbody")
+  .insertAdjacentHTML("afterbegin", "<%= j render 'email', email: @email %>")

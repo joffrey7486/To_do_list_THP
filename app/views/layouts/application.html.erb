@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400&display=swap" rel="stylesheet">
-
   </head>
 
   <body>
@@ -22,10 +21,7 @@
     <%= render 'layouts/navbar'  %>
     <%= render 'layouts/flash'  %>
       
-    <div class="mx-1 mx-md-5 d-flex flex-column align-items-center">
-      <!-- 
-      <h1 style="font-size:500px; padding-left:25%;"><i class="fab fa-wizards-of-the-coast"></i></h1>
-      -->
+    <div class="mx-1 mx-md-5 d-flex flex-column align-items-center justify-content-between">
       <%= yield %>
     </div>
 

@@ -1,3 +1,8 @@
-emailLine = document.querySelector("#email-<%= @email.id %> td:last-child");
-emailLine.innerHTML = "<%= j render 'email-info', email: @email %>";
-document.querySelector("#email-<%= @email.id %> td:first-child").classList.remove("fw-bolder")
+document
+  .querySelector("#email-<%= @email.id %> td:last-child")
+  .innerHTML = "<%= j render 'email-info', email: @email %>"
+
+document
+  .querySelector("#email-<%= @email.id %> td:first-child")
+  .classList
+  .remove("fw-bolder")
